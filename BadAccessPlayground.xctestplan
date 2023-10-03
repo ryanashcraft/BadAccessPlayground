@@ -1,0 +1,36 @@
+{
+  "configurations" : [
+    {
+      "id" : "2F0BF258-9852-482B-B3B1-87E2385D21CE",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "guardMallocEnabled" : true,
+    "mallocGuardEdgesEnabled" : true,
+    "mallocScribbleEnabled" : true,
+    "mallocStackLoggingOptions" : {
+      "loggingType" : "liveAllocations"
+    },
+    "nsZombieEnabled" : true,
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:BadAccessPlayground.xcodeproj",
+      "identifier" : "94BA19ED2ACA87E10009E9F1",
+      "name" : "BadAccessPlayground"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:BadAccessPlayground.xcodeproj",
+        "identifier" : "94BA1A082ACA89BA0009E9F1",
+        "name" : "BadAccessPlaygroundTests"
+      }
+    }
+  ],
+  "version" : 1
+}
