@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		940E2C242ACDC96300110DA2 /* BadAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940E2C232ACDC96300110DA2 /* BadAccess.swift */; };
 		94BA19F22ACA87E10009E9F1 /* BadAccessPlaygroundApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BA19F12ACA87E10009E9F1 /* BadAccessPlaygroundApp.swift */; };
 		94BA19F42ACA87E10009E9F1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BA19F32ACA87E10009E9F1 /* ContentView.swift */; };
 		94BA19F62ACA87E20009E9F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94BA19F52ACA87E20009E9F1 /* Assets.xcassets */; };
@@ -25,6 +26,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		940E2C232ACDC96300110DA2 /* BadAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadAccess.swift; sourceTree = "<group>"; };
 		94BA19EE2ACA87E10009E9F1 /* BadAccessPlayground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BadAccessPlayground.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94BA19F12ACA87E10009E9F1 /* BadAccessPlaygroundApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadAccessPlaygroundApp.swift; sourceTree = "<group>"; };
 		94BA19F32ACA87E10009E9F1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 			children = (
 				94BA19F12ACA87E10009E9F1 /* BadAccessPlaygroundApp.swift */,
 				94BA19F32ACA87E10009E9F1 /* ContentView.swift */,
+				940E2C232ACDC96300110DA2 /* BadAccess.swift */,
 				94BA19F52ACA87E20009E9F1 /* Assets.xcassets */,
 				94BA19F72ACA87E20009E9F1 /* Preview Content */,
 			);
@@ -199,6 +202,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				940E2C242ACDC96300110DA2 /* BadAccess.swift in Sources */,
 				94BA19F42ACA87E10009E9F1 /* ContentView.swift in Sources */,
 				94BA19F22ACA87E10009E9F1 /* BadAccessPlaygroundApp.swift in Sources */,
 			);
