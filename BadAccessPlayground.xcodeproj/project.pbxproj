@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		94A63A152ACDFF9C00C81529 /* Promises in Frameworks */ = {isa = PBXBuildFile; productRef = 94A63A142ACDFF9C00C81529 /* Promises */; };
 		94BA19F22ACA87E10009E9F1 /* BadAccessPlaygroundApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BA19F12ACA87E10009E9F1 /* BadAccessPlaygroundApp.swift */; };
 		94BA19F42ACA87E10009E9F1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BA19F32ACA87E10009E9F1 /* ContentView.swift */; };
 		94BA19F62ACA87E20009E9F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94BA19F52ACA87E20009E9F1 /* Assets.xcassets */; };
@@ -40,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94A63A152ACDFF9C00C81529 /* Promises in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,6 +117,9 @@
 			dependencies = (
 			);
 			name = BadAccessPlayground;
+			packageProductDependencies = (
+				94A63A142ACDFF9C00C81529 /* Promises */,
+			);
 			productName = BadAccessPlayground;
 			productReference = 94BA19EE2ACA87E10009E9F1 /* BadAccessPlayground.app */;
 			productType = "com.apple.product-type.application";
@@ -165,6 +170,9 @@
 				Base,
 			);
 			mainGroup = 94BA19E52ACA87E10009E9F1;
+			packageReferences = (
+				94A63A132ACDFF9B00C81529 /* XCRemoteSwiftPackageReference "promises" */,
+			);
 			productRefGroup = 94BA19EF2ACA87E10009E9F1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -471,6 +479,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		94A63A132ACDFF9B00C81529 /* XCRemoteSwiftPackageReference "promises" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/promises";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.3.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		94A63A142ACDFF9C00C81529 /* Promises */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 94A63A132ACDFF9B00C81529 /* XCRemoteSwiftPackageReference "promises" */;
+			productName = Promises;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 94BA19E62ACA87E10009E9F1 /* Project object */;
 }

@@ -1,5 +1,5 @@
 import XCTest
-import Combine
+import Promises
 
 class Item {
     deinit {
@@ -31,19 +31,15 @@ class Store {
 final class BadAccessPlaygroundTests: XCTestCase {
     func testBadAccess() {
         let expectation = expectation(description: "expectation")
-        var task: AnyCancellable?
         
-        task = Future<Item, Never> { promise in
+        Promise<Item> { resolve, _ in
             Store.shared.fetchItem() { result in
-                promise(.success(result))
+                resolve(result)
             }
         }
-            .sink(
-                receiveCompletion: { _ in
-                    expectation.fulfill()
-                    task?.cancel()
-                }, receiveValue: { _ in }
-            )
+        .then { _ in
+            expectation.fulfill()
+        }
         
         wait(for: [expectation])
     }
