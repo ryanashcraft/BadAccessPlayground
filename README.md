@@ -10,4 +10,5 @@ I'm trying to understand why this unit test (often) produces EXC_BAD_ACCESS erro
 
 ## Screenshots
 
-![Screenshot of Xcode with an EXC_BAD_ACCESS](/screenshots/1.png)
+![Screenshot of Xcode with a breakpoint unexpectedly hitting Item's deinit](/screenshots/1.png)
+![Screenshot of Xcode with an EXC_BAD_ACCESS](/screenshots/2.png)
