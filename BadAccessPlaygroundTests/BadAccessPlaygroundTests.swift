@@ -3,8 +3,10 @@ import Combine
 
 class Item {
     deinit {
-        // Shouldn't ever be called due to Store being a global singleton, but can get called randomly by Future.deinit
-        // If it ever should be called, shouldn't it only be called by Store.deinit?
+        // Randomly called by Future.deinit
+        // How does this instance's retain count go to zero?
+        // Shouldn't the Store retain this, preventing it from being freed?
+        // The Store itself is never deinitialized
         print("item deinit")
     }
 }
@@ -13,6 +15,11 @@ class Store {
     static let shared = Store()
     private let item: Item = Item()
     private let queue = DispatchQueue(label: "Store.queue")
+    
+    deinit {
+        // Let's rule out the Store instance being deinitialized
+        fatalError("store deinit")
+    }
     
     func fetchItem(completion: @escaping (Item) -> Void) {
         queue.async {
