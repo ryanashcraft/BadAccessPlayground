@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		943DDDE32ACE0174000F7A84 /* OpenCombine in Frameworks */ = {isa = PBXBuildFile; productRef = 943DDDE22ACE0174000F7A84 /* OpenCombine */; };
 		94BA19F22ACA87E10009E9F1 /* BadAccessPlaygroundApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BA19F12ACA87E10009E9F1 /* BadAccessPlaygroundApp.swift */; };
 		94BA19F42ACA87E10009E9F1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BA19F32ACA87E10009E9F1 /* ContentView.swift */; };
 		94BA19F62ACA87E20009E9F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94BA19F52ACA87E20009E9F1 /* Assets.xcassets */; };
@@ -40,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				943DDDE32ACE0174000F7A84 /* OpenCombine in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,6 +117,9 @@
 			dependencies = (
 			);
 			name = BadAccessPlayground;
+			packageProductDependencies = (
+				943DDDE22ACE0174000F7A84 /* OpenCombine */,
+			);
 			productName = BadAccessPlayground;
 			productReference = 94BA19EE2ACA87E10009E9F1 /* BadAccessPlayground.app */;
 			productType = "com.apple.product-type.application";
@@ -165,6 +170,9 @@
 				Base,
 			);
 			mainGroup = 94BA19E52ACA87E10009E9F1;
+			packageReferences = (
+				943DDDE12ACE0174000F7A84 /* XCRemoteSwiftPackageReference "OpenCombine" */,
+			);
 			productRefGroup = 94BA19EF2ACA87E10009E9F1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -471,6 +479,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		943DDDE12ACE0174000F7A84 /* XCRemoteSwiftPackageReference "OpenCombine" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/OpenCombine/OpenCombine";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.14.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		943DDDE22ACE0174000F7A84 /* OpenCombine */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 943DDDE12ACE0174000F7A84 /* XCRemoteSwiftPackageReference "OpenCombine" */;
+			productName = OpenCombine;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 94BA19E62ACA87E10009E9F1 /* Project object */;
 }
