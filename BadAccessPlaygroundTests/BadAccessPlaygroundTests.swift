@@ -22,12 +22,14 @@ class Store {
 }
 
 final class BadAccessPlaygroundTests: XCTestCase {
+    var store = Store()
+    
     func testBadAccess() {
         let expectation = expectation(description: "expectation")
         var task: AnyCancellable?
         
         task = Future<Item, Never> { promise in
-            Store.shared.fetchItem() { result in
+            self.store.fetchItem() { result in
                 promise(.success(result))
             }
         }
