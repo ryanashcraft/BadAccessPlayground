@@ -1,38 +1,38 @@
 import XCTest
 import Combine
 
-@testable import BadAccessPlayground
+class Item {}
+
+class Store {
+    private let item: Item = Item()
+    private let queue = DispatchQueue(label: "Store.queue")
+    
+    func fetchItem(completion: @escaping (Item) -> Void) {
+        queue.async {
+            completion(self.item)
+        }
+    }
+}
 
 final class BadAccessPlaygroundTests: XCTestCase {
-    let loopCount = 5000
-    let maxItemCount = 1000
+    var tasks = Set<AnyCancellable>()
     
     func testBadAccess() {
         let store = Store()
-
-        for i in 0 ..< loopCount {
-            let expectation = expectation(description: "expectation \(i)")
-            
-            var task: AnyCancellable?
-
-            task = (0 ..< maxItemCount)
-                .publisher
-                .flatMap { x in
-                    Future<[Item], Never> { promise in
-                        Task {
-                            let result = try! await store.fetchItems(count: x)
-                            promise(.success(result))
-                        }
-                    }
-                }
-                .assertNoFailure()
-                .collect()
-                .sink { _ in
-                    expectation.fulfill()
-                    task?.cancel()
-                }
-            
-            wait(for: [expectation], timeout: 100)
+        let expectation = expectation(description: "expectation")
+        
+        Future<Item, Never> { promise in
+            store.fetchItem() { result in
+                promise(.success(result))
+            }
         }
+            .sink(
+                receiveCompletion: { _ in
+                    expectation.fulfill()
+                }, receiveValue: { _ in }
+            )
+            .store(in: &tasks)
+        
+        wait(for: [expectation])
     }
 }

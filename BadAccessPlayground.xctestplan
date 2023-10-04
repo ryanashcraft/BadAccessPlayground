@@ -9,13 +9,6 @@
     }
   ],
   "defaultOptions" : {
-    "guardMallocEnabled" : true,
-    "mallocGuardEdgesEnabled" : true,
-    "mallocScribbleEnabled" : true,
-    "mallocStackLoggingOptions" : {
-      "loggingType" : "liveAllocations"
-    },
-    "nsZombieEnabled" : true,
     "targetForVariableExpansion" : {
       "containerPath" : "container:BadAccessPlayground.xcodeproj",
       "identifier" : "94BA19ED2ACA87E10009E9F1",

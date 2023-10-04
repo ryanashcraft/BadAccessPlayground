@@ -11,7 +11,6 @@
 		94BA19F42ACA87E10009E9F1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BA19F32ACA87E10009E9F1 /* ContentView.swift */; };
 		94BA19F62ACA87E20009E9F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94BA19F52ACA87E20009E9F1 /* Assets.xcassets */; };
 		94BA19F92ACA87E20009E9F1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94BA19F82ACA87E20009E9F1 /* Preview Assets.xcassets */; };
-		94BA1A002ACA87FD0009E9F1 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BA19FF2ACA87FD0009E9F1 /* Store.swift */; };
 		94BA1A122ACA89BE0009E9F1 /* BadAccessPlaygroundTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BA1A012ACA89050009E9F1 /* BadAccessPlaygroundTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,7 +30,6 @@
 		94BA19F32ACA87E10009E9F1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		94BA19F52ACA87E20009E9F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		94BA19F82ACA87E20009E9F1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		94BA19FF2ACA87FD0009E9F1 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		94BA1A012ACA89050009E9F1 /* BadAccessPlaygroundTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadAccessPlaygroundTests.swift; sourceTree = "<group>"; };
 		94BA1A092ACA89BA0009E9F1 /* BadAccessPlaygroundTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BadAccessPlaygroundTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		94BA1A132ACA8B430009E9F1 /* BadAccessPlayground.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = BadAccessPlayground.xctestplan; sourceTree = "<group>"; };
@@ -79,7 +77,6 @@
 			children = (
 				94BA19F12ACA87E10009E9F1 /* BadAccessPlaygroundApp.swift */,
 				94BA19F32ACA87E10009E9F1 /* ContentView.swift */,
-				94BA19FF2ACA87FD0009E9F1 /* Store.swift */,
 				94BA19F52ACA87E20009E9F1 /* Assets.xcassets */,
 				94BA19F72ACA87E20009E9F1 /* Preview Content */,
 			);
@@ -204,7 +201,6 @@
 			files = (
 				94BA19F42ACA87E10009E9F1 /* ContentView.swift in Sources */,
 				94BA19F22ACA87E10009E9F1 /* BadAccessPlaygroundApp.swift in Sources */,
-				94BA1A002ACA87FD0009E9F1 /* Store.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
