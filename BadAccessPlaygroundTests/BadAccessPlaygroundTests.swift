@@ -1,9 +1,16 @@
 import XCTest
 import Combine
 
-class Item {}
+class Item {
+    deinit {
+        // Shouldn't ever be called due to Store being a global singleton, but can get called randomly by Future.deinit
+        // If it ever should be called, shouldn't it only be called by Store.deinit?
+        print("item deinit")
+    }
+}
 
 class Store {
+    static let shared = Store()
     private let item: Item = Item()
     private let queue = DispatchQueue(label: "Store.queue")
     
@@ -15,23 +22,21 @@ class Store {
 }
 
 final class BadAccessPlaygroundTests: XCTestCase {
-    var tasks = Set<AnyCancellable>()
-    
     func testBadAccess() {
-        let store = Store()
         let expectation = expectation(description: "expectation")
+        var task: AnyCancellable?
         
-        Future<Item, Never> { promise in
-            store.fetchItem() { result in
+        task = Future<Item, Never> { promise in
+            Store.shared.fetchItem() { result in
                 promise(.success(result))
             }
         }
             .sink(
                 receiveCompletion: { _ in
                     expectation.fulfill()
+                    task?.cancel()
                 }, receiveValue: { _ in }
             )
-            .store(in: &tasks)
         
         wait(for: [expectation])
     }
