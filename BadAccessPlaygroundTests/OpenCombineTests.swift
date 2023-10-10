@@ -1,25 +1,12 @@
 import XCTest
-import Combine
+import OpenCombine
 
-class Item {
-    deinit {
-        // Randomly called by Future.deinit
-        // How does this instance's retain count go to zero?
-        // Shouldn't the Store retain this, preventing it from being freed?
-        // The Store itself is never deinitialized
-        print("item deinit")
-    }
-}
+private class Item {}
 
-class Store {
+private class Store {
     static let shared = Store()
     private let item: Item = Item()
     private let queue = DispatchQueue(label: "Store.queue")
-    
-    deinit {
-        // Let's rule out the Store instance being deinitialized
-        fatalError("store deinit")
-    }
     
     func fetchItem(completion: @escaping (Item) -> Void) {
         queue.async {
@@ -28,7 +15,9 @@ class Store {
     }
 }
 
-final class BadAccessPlaygroundTests: XCTestCase {
+/// Port of `CombineTests.swift` to use OpenCombine instead
+/// Also yields `EXC_BAD_ACCESS` with enough test iterations
+final class OpenCombineTests: XCTestCase {
     func testBadAccess() {
         let expectation = expectation(description: "expectation")
         var task: AnyCancellable?
@@ -41,10 +30,20 @@ final class BadAccessPlaygroundTests: XCTestCase {
             .sink(
                 receiveCompletion: { _ in
                     expectation.fulfill()
-                    task?.cancel()
                 }, receiveValue: { _ in }
             )
         
         wait(for: [expectation])
+        task?.cancel()
+    }
+    
+    /// Simplified test case: doesn't even use Store and still leads to an `EXC_BAD_ACCESS` with enough test iterations
+    func testBadAccessSimplified() async {
+        let item = await Future<Item, Never> { promise in
+            DispatchQueue.global().async {
+                promise(.success(Item()))
+            }
+        }
+        .value
     }
 }

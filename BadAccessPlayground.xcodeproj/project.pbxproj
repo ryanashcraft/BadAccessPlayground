@@ -7,11 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		94AC24A02ACF2708002671F3 /* OpenCombineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94AC249F2ACF2708002671F3 /* OpenCombineTests.swift */; };
+		94AC24A32ACF2720002671F3 /* OpenCombine in Frameworks */ = {isa = PBXBuildFile; productRef = 94AC24A22ACF2720002671F3 /* OpenCombine */; };
+		94AC24A62ACF2729002671F3 /* Promises in Frameworks */ = {isa = PBXBuildFile; productRef = 94AC24A52ACF2729002671F3 /* Promises */; };
+		94AC24A82ACF27AD002671F3 /* PromisesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94AC24A72ACF27AD002671F3 /* PromisesTests.swift */; };
 		94BA19F22ACA87E10009E9F1 /* BadAccessPlaygroundApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BA19F12ACA87E10009E9F1 /* BadAccessPlaygroundApp.swift */; };
 		94BA19F42ACA87E10009E9F1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BA19F32ACA87E10009E9F1 /* ContentView.swift */; };
 		94BA19F62ACA87E20009E9F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94BA19F52ACA87E20009E9F1 /* Assets.xcassets */; };
 		94BA19F92ACA87E20009E9F1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94BA19F82ACA87E20009E9F1 /* Preview Assets.xcassets */; };
-		94BA1A122ACA89BE0009E9F1 /* BadAccessPlaygroundTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BA1A012ACA89050009E9F1 /* BadAccessPlaygroundTests.swift */; };
+		94BA1A122ACA89BE0009E9F1 /* CombineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BA1A012ACA89050009E9F1 /* CombineTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,12 +29,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		94AC249F2ACF2708002671F3 /* OpenCombineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenCombineTests.swift; sourceTree = "<group>"; };
+		94AC24A72ACF27AD002671F3 /* PromisesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromisesTests.swift; sourceTree = "<group>"; };
 		94BA19EE2ACA87E10009E9F1 /* BadAccessPlayground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BadAccessPlayground.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94BA19F12ACA87E10009E9F1 /* BadAccessPlaygroundApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadAccessPlaygroundApp.swift; sourceTree = "<group>"; };
 		94BA19F32ACA87E10009E9F1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		94BA19F52ACA87E20009E9F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		94BA19F82ACA87E20009E9F1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		94BA1A012ACA89050009E9F1 /* BadAccessPlaygroundTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadAccessPlaygroundTests.swift; sourceTree = "<group>"; };
+		94BA1A012ACA89050009E9F1 /* CombineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineTests.swift; sourceTree = "<group>"; };
 		94BA1A092ACA89BA0009E9F1 /* BadAccessPlaygroundTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BadAccessPlaygroundTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		94BA1A132ACA8B430009E9F1 /* BadAccessPlayground.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = BadAccessPlayground.xctestplan; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -40,6 +46,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94AC24A62ACF2729002671F3 /* Promises in Frameworks */,
+				94AC24A32ACF2720002671F3 /* OpenCombine in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,7 +102,9 @@
 		94BA1A0A2ACA89BA0009E9F1 /* BadAccessPlaygroundTests */ = {
 			isa = PBXGroup;
 			children = (
-				94BA1A012ACA89050009E9F1 /* BadAccessPlaygroundTests.swift */,
+				94AC249F2ACF2708002671F3 /* OpenCombineTests.swift */,
+				94AC24A72ACF27AD002671F3 /* PromisesTests.swift */,
+				94BA1A012ACA89050009E9F1 /* CombineTests.swift */,
 			);
 			path = BadAccessPlaygroundTests;
 			sourceTree = "<group>";
@@ -115,6 +125,10 @@
 			dependencies = (
 			);
 			name = BadAccessPlayground;
+			packageProductDependencies = (
+				94AC24A22ACF2720002671F3 /* OpenCombine */,
+				94AC24A52ACF2729002671F3 /* Promises */,
+			);
 			productName = BadAccessPlayground;
 			productReference = 94BA19EE2ACA87E10009E9F1 /* BadAccessPlayground.app */;
 			productType = "com.apple.product-type.application";
@@ -165,6 +179,10 @@
 				Base,
 			);
 			mainGroup = 94BA19E52ACA87E10009E9F1;
+			packageReferences = (
+				94AC24A12ACF2720002671F3 /* XCRemoteSwiftPackageReference "OpenCombine" */,
+				94AC24A42ACF2729002671F3 /* XCRemoteSwiftPackageReference "promises" */,
+			);
 			productRefGroup = 94BA19EF2ACA87E10009E9F1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -208,7 +226,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				94BA1A122ACA89BE0009E9F1 /* BadAccessPlaygroundTests.swift in Sources */,
+				94AC24A82ACF27AD002671F3 /* PromisesTests.swift in Sources */,
+				94AC24A02ACF2708002671F3 /* OpenCombineTests.swift in Sources */,
+				94BA1A122ACA89BE0009E9F1 /* CombineTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,6 +491,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		94AC24A12ACF2720002671F3 /* XCRemoteSwiftPackageReference "OpenCombine" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/OpenCombine/OpenCombine";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.14.0;
+			};
+		};
+		94AC24A42ACF2729002671F3 /* XCRemoteSwiftPackageReference "promises" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/promises";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.3.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		94AC24A22ACF2720002671F3 /* OpenCombine */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 94AC24A12ACF2720002671F3 /* XCRemoteSwiftPackageReference "OpenCombine" */;
+			productName = OpenCombine;
+		};
+		94AC24A52ACF2729002671F3 /* Promises */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 94AC24A42ACF2729002671F3 /* XCRemoteSwiftPackageReference "promises" */;
+			productName = Promises;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 94BA19E62ACA87E10009E9F1 /* Project object */;
 }
